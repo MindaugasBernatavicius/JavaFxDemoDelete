@@ -14,6 +14,8 @@ This describes how to launch the application to test its functionality in some w
 
 ## Feature list
 
+....
+
 ## Technologies used
 
 ## How to contribue
