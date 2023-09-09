@@ -1,5 +1,6 @@
-package cf.mindaugas.javafxdemodelete;
+package cf.mindaugas.javafxdemodelete.controllers;
 
+import cf.mindaugas.javafxdemodelete.data.Text;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -23,6 +24,8 @@ public class HelloController {
 
             tx.commit();
             ses.close();
+
+            inputText.setText("");
         });
     }
 }

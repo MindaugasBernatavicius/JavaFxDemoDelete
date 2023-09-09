@@ -7,4 +7,8 @@ module cf.mindaugas.javafxdemodelete {
 
     opens cf.mindaugas.javafxdemodelete to javafx.fxml, org.hibernate.orm.core;
     exports cf.mindaugas.javafxdemodelete;
+    exports cf.mindaugas.javafxdemodelete.controllers;
+    opens cf.mindaugas.javafxdemodelete.controllers to javafx.fxml, org.hibernate.orm.core;
+    exports cf.mindaugas.javafxdemodelete.data;
+    opens cf.mindaugas.javafxdemodelete.data to javafx.fxml, org.hibernate.orm.core;
 }

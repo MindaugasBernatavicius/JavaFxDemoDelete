@@ -1,5 +1,7 @@
 package cf.mindaugas.javafxdemodelete;
 
+import cf.mindaugas.javafxdemodelete.controllers.HelloController;
+import cf.mindaugas.javafxdemodelete.data.HibernateUtil;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

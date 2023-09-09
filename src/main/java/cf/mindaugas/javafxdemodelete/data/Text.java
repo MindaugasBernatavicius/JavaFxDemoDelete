@@ -1,4 +1,4 @@
-package cf.mindaugas.javafxdemodelete;
+package cf.mindaugas.javafxdemodelete.data;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
