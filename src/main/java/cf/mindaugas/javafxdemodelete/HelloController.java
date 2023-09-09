@@ -1,14 +1,28 @@
 package cf.mindaugas.javafxdemodelete;
 
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import org.hibernate.SessionFactory;
 
 public class HelloController {
-    @FXML
-    private Label welcomeText;
+    private final SessionFactory session;
+    @FXML private TextField inputText;
+    @FXML public Button displayButton;
 
-    @FXML
-    protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+    public HelloController(SessionFactory session) {
+        this.session = session;
+    }
+
+    public void initialize() {
+        this.displayButton.setOnAction(actionEvent -> {
+            var ses = session.openSession();
+            var tx = ses.beginTransaction();
+
+            ses.persist(new Text(inputText.getText()));
+
+            tx.commit();
+            ses.close();
+        });
     }
 }
