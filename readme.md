@@ -18,7 +18,6 @@ This is a description of the project, telling readers what it does and why.
 - launch the application (entry point cf.mindaugas.jfxdelete.App class)
 ![image](https://github.com/MindaugasBernatavicius/JavaFxDemoDelete/assets/7895269/9efc6324-918f-4a6a-b691-312fad358626)
 
-
 ## Launch tests
 
 ....
