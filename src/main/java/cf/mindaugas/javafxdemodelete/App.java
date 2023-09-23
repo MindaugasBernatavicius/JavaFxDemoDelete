@@ -8,14 +8,20 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import org.hibernate.SessionFactory;
 
+import java.io.FileInputStream;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.Properties;
 
 public class App extends Application {
     private SessionFactory hibSession;
 
     @Override
     public void start(Stage stage) throws IOException {
-        hibSession = HibernateUtil.getSessionFactory();
+        var props = new Properties();
+        props.load(new FileInputStream("target\\classes\\app.properties"));
+
+        hibSession = HibernateUtil.getSessionFactory(props);
         var resource = App.class.getResource("hello-view.fxml");
         var fxmlLoader = new FXMLLoader(resource);
 

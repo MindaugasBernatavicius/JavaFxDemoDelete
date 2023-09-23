@@ -1,0 +1,4 @@
+DB_IP=<your db ip>
+DB_PORT=<your db port>
+DB_USER=<your db username>
+DB_PASS=<your db password>
